@@ -1,44 +1,69 @@
 (function() 
  {
   var allQuestions = [{
-    question: "The tree sends downroots from its branches to the soil is know as:",
-    options: ["Oak", "Pine", "Banyan", "Palm"],
+    question:"What is the minimum age for driving a motorcycle without gear?", 
+    options: ["12 years", "14 years", "16 years", "18years"],
     answer: 2
   }, {
-    question: "Electric bulb filament is made of",
-    options: ["Copper", "Aluminum", "lead", "Tungsten"],
+    question: "What should you do when you see a traffic sign of a school nearby?",
+    options: ["Stop the vehicle", "go on with same speed", "Press horn and proceed in the same speed", "Slow down and proceed carefully"],
     answer: 3
   }, {
-    question: "Non Metal that remains liquid at room temprature is",
-    options: ["Phophorous", "Bromine", "Clorine","Helium"],
+    question: "Near a pedestrian crossing, when the pedestrians are waiting to cross the road, you should",
+    options: ["Sound horn and proceed", "Stop the vehicle and wait till the pedestrians cross the road and then proceed", "Slow down, sound horn and pass","continue going on"],
     answer: 1
   },{
-    question: "Which of the following is used in Pencils ?",
-    options: ["Graphite", "Silicon", "Charcoal", "Phosphorous"],
+    question: "On a road designated as one way",
+    options: ["Should not drive in reverse gear", "Parking is prohibited", "Overtaking is prohibited", "U turn is prohibited"],
     answer: 0
   }, {
-    question: "Chemical formula of water ?",
-    options: ["NaA1O2", "H2O", "Al2O3", "CaSiO3"],
+    question: "You can overtake a vehicle in front",
+    options: ["Through the left side", "Through the right side of that vehicle", "Through the left side, if the road is wide", "none of these"],
     answer: 1
   },{
-    question: "The gas filled in electric bulb is ?",
-    options: ["Nitrogen", "Hydrogen", "Carbon Dioxide", "Oxygen"],
+    question: "How can you distinguish a transport vehicle ?",
+    options: ["By looking at the number plate of the vehicle.", "By looking at the tyre size.", "By colour of the vehicle.", "none of these"],
     answer: 0
   },{
-    question: "Whashing soda is the comman name for",
-    options: ["Sodium Carbonate", "Calcium Bicarbonate", "Sodium Bicarbonate", "Calcium Carbonate"],
-    answer: 0
+    question: "Validity of learners licence",
+    options: ["Till the driving licence is obtained", " 6 months", "30 days", "1 year"],
+    answer: 1
   },{
-    question: "Which gas is not known as green house gas ?",
-    options: ["Methane", "Nitrous oxide", "Carbon Dioxide", "Hydrogen"],
-    answer: 3
-  },{
-    question: "The hardest substance availabe on earth is",
-    options: ["Gold", "Iron", "Diamond", "Platinum"],
+    question: "In a road without footpath, the pedestrians",
+    options: ["Should walk on the left side of the road", "May walk on either side of the road", "Should walk on the right side of the road", "none of these"],
     answer: 2
   },{
-    question: "Used as a lubricant",
-    options: ["Graphite", "Silica", "Iron Oxide", "Diamond"],
+    question: "Free passage should be given to the following types of vehicles",
+    options: ["Police vehicles.", "Express, Super Express buses", "Ambulance and fire service vehicles", "none of these"],
+    answer: 2
+  },{
+    question: "Vehicles proceeding from opposite direction should be allowed to pass through? ",
+    options: ["Your right side", "Your left side", "The convenient side", "none of these "],
+    answer: 0
+    }
+   ,{
+    question: "Driver of a vehicle may overtake ?",
+    options: ["When the driver of the vehicle in front shows the signal to overtake", "If the road is sufficiently wide", "while driving down hill", "none of these"],
+    answer: 0
+    }
+   ,{
+    question: "Driver of a motor vehicle shall drive through",
+    options: ["The left side of the road", "The right side of the road", "The Center of the road", " The wrong side of the road"],
+    answer: 0
+    }
+   ,{
+    question: "Fog lamps are used",
+    options: ["When there is mist.", "During night.", "When the opposite vehicle is not using dim light", "none of these"],
+    answer: 0
+    }
+   ,{
+    question: "Red traffic light indicates ..",
+    options: ["stop the vehicle.", "vehicle can proceed with caution.", "speed up ", "slow down"],
+    answer: 0
+    }
+   ,{
+    question: "Parking a vehicle in front of entrance to hospital",
+    options: ["improper", "proper", "Proper if NO PARKING sign is not provided", "none of these"],
     answer: 0
     }];
   
