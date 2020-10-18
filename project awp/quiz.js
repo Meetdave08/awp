@@ -66,7 +66,8 @@
     options: ["improper", "proper", "Proper if NO PARKING sign is not provided", "none of these"],
     answer: 0
     }];
-  
+
+
   var quesCounter = 0;
   var selectOptions = [];
   var quizSpace = $('#quiz');
