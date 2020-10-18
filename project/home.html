@@ -1,0 +1,72 @@
+<?php 
+	session_start(); 
+
+	if (!isset($_SESSION['username'])) {
+		$_SESSION['msg'] = "You must log in first";
+		header('location: login.php');
+	}
+
+	if (isset($_GET['logout'])) {
+		session_destroy();
+		unset($_SESSION['username']);
+		header("location: login.php");
+	}
+
+?>
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+/>
+<style>
+button {
+font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+"Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+background-color: orange;
+border: none;
+color: white;
+padding: 12px 16px;
+font-size: 32px;
+cursor: pointer;
+}
+i {
+padding: 15px;
+color: black;
+}
+button:hover {
+background-color: #ADD8E6;
+}
+button:hover i {
+color: black;
+}
+body {
+  background-image: url('rto.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;  
+  background-size: cover;
+}
+
+</style>
+</head>
+<body>
+<div style = "position:relative;top:275px;">
+<center>
+<a href="home.html">
+<button><i class="fa fa-home"></i>Home</button></a>
+<a href="qb.html">
+<button>
+<i class="fa fa-book" aria-hidden="true"></i>Question bank
+</button></a>
+<a href="index.html">
+<button><i class="fa fa-list-alt" aria-hidden="true"></i>Test</button>
+</a>
+<a href="fb.html">
+<button><i class="fa fa-commenting-o" aria-hidden="true"></i>Feedback</button>
+</a>
+
+</center>
+</div>
+</body>
+</html>
