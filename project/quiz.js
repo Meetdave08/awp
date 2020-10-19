@@ -207,6 +207,7 @@
   }
 
   function nextQuestion() {
+    reset_timer(30);
     quizSpace.fadeOut(function () {
       $("#question").remove();
       if (quesCounter < allQuestions.length) {
@@ -233,41 +234,38 @@
     });
   }
 
-  const timer = setInterval(() => {
-    quesCounter++;
-    var minutes = 60 * 1,
-      display = document.querySelector("#time");
-    startTimer(minutes, display);
-    if (quesCounter >= 2) {
-      stopTimer();
-    }
-    nextQuestion();
-  }, 60000);
+  // timer variables
+  default_time = 30;
+  var timer_time = default_time;
+  var minutes, seconds;
+  var display = document.querySelector("#time");
 
-  function stopTimer() {
-    clearInterval(timer);
+  function reset_timer(time) {
+    timer_time = time;
   }
-  var minutes = 60 * 1,
-    display = document.querySelector("#time");
-  startTimer(minutes, display);
 
-  function startTimer(duration, display) {
-    var timer = duration,
-      minutes,
-      seconds;
-    setInterval(function () {
-      minutes = parseInt(timer / 60, 10);
-      seconds = parseInt(timer % 60, 10);
+  var timer = setInterval(function () {
+    minutes = parseInt(timer_time / 60, 10);
+    seconds = parseInt(timer_time % 60, 10);
 
-      minutes = minutes < 10 ? "0" + minutes : minutes;
-      seconds = seconds < 10 ? "0" + seconds : seconds;
+    minutes = minutes < 10 ? "0" + minutes : minutes;
+    seconds = seconds < 10 ? "0" + seconds : seconds;
 
-      display.textContent = minutes + ":" + seconds;
+    display.textContent = minutes + ":" + seconds;
 
-      if (--timer < 0) {
-        timer = duration;
+    if (--timer_time < 0) {
+      quesCounter++;
+      nextQuestion();
+      if (quesCounter >= 14) {
+        stop_timer();
       }
-    }, 1000);
+      timer_time = default_time;
+    }
+  }, 1000);
+
+  function stop_timer() {
+    clearInterval(timer);
+    display.textContent = "GAME OVER ";
   }
 
   function displayResult() {
